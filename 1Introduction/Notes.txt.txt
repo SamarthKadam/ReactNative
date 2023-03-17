@@ -1,0 +1,9 @@
+What is reactNative?
+React js+React Native= Real Native Mobile Applications
+
+*Components are compiled.
+So UI elements are compiled to native views
+What about logic? Written in JS runs JS thread hosted by react native app
+
+Which to chose Expo CLI or ReactNative Cli
+go with Expo CLI
