@@ -2,6 +2,7 @@ import { FlatList } from "react-native";
 import { Text,View,StyleSheet} from "react-native"
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 import MealItem from "../components/MealItem";
+import MealList from "../components/MealList";
 import { useLayoutEffect } from "react";
 
 export default function MealsOverviewScreen({route,navigation}) {
@@ -42,19 +43,11 @@ export default function MealsOverviewScreen({route,navigation}) {
 
 
   return (
-    <View style={styles.container}>
-       <FlatList data={displayedMeals} keyExtractor={(item)=>item.id} renderItem={renderMealItem}></FlatList>
-    </View>
+    <MealList items={displayedMeals}></MealList>
   )
 }
 
 
-const styles=StyleSheet.create({
-    container:{
-        flex:1,
-        padding:16
-    }
-})
 
 
 //alternatively instead of using route as used above we can also use by making use of useroute hook
